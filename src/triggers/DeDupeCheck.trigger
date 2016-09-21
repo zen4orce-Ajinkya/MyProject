@@ -6,7 +6,7 @@ trigger DeDupeCheck on Lead (before insert,after insert,before update) {
         if(Trigger.isInsert)
         {
            LeadHealperClass.DuplicateLeads(Trigger.new);
-           //   LeadHealperClass.DuplicateLeadsByMap(Trigger.newMap); 
+           TimeStampHandlerClass.BeforeInsertCheakForStateTimeStampUpdate(Trigger.new);
         }  
         
         if(trigger.isUpdate)
@@ -17,7 +17,7 @@ trigger DeDupeCheck on Lead (before insert,after insert,before update) {
       } 
        if(trigger.isAfter)
      {
-        
+       
         if(trigger.isInsert)
         {
             LeadHealperClass.createTask(Trigger.new);

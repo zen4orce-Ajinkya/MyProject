@@ -5,4 +5,5 @@
     <logo>Clean_Assessment/Clean_Assessment_Tab.jpg</logo>
     <tab>Data_com_Assessment</tab>
     <tab>Assessment_Summary__c</tab>
+    <tab>TimeStamp__c</tab>
 </CustomApplication>
